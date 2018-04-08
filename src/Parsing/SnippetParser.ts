@@ -20,11 +20,12 @@ export class SnippetParser {
 				if (word === snippet.keyword) {
 					// Add the keyword content instead of the word to the result
 					returnText += snippet.content + " ";
-				} else {
+					break;
+				} else if(this.snippets[this.snippets.length - 1] === snippet) {
 					// Make sure we do not add a trailing space.
 					if (words[words.length - 1] === word) {
 						returnText += word;
-						continue;
+						break;
 					}
 
 					// Add the non keyword to the result

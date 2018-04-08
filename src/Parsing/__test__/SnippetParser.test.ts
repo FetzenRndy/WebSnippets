@@ -23,4 +23,13 @@ describe("The snippet parser", () => {
 
 		expect(parsedText[parsedText.length - 1]).not.toEqual(" ");
 	});
+
+	it("should replace multiple snippets", () => {
+		parser.registerSnippet(new Snippet("$otherTest", "not wired"));
+
+		const originalText = "$test $otherTest";
+		const parsedText = parser.replaceKeywords(originalText);
+
+		expect(parsedText).toEqual("wired not wired ");
+	});
 });
