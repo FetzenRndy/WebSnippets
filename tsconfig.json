@@ -23,6 +23,7 @@
 		"types": [
 			"node",
 			"jest",
+			"chrome"
 		]
 	},
 	"exclude": [

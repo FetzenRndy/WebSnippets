@@ -1,14 +1,12 @@
-const webpack = require("webpack");
-const path = require("path");
+const atl = require("awesome-typescript-loader");
 const glob = require("glob");
+const utils = require("./utils");
+const config = require("./config");
 
 // -- Webpack blocks
 const {
 	sourceMaps,
 	createConfig,
-
-	// Feature blocks
-	typescript,
 
 	// Shorthand setters
 	customConfig,
@@ -18,16 +16,25 @@ const {
 	uglify
 } = require("webpack-blocks");
 
-// -- Custom Blocks
-const utils = require("./utils");
-const config = require("./config");
-
 // -- Config
 module.exports = createConfig([
-	entryPoint(utils.toObject(glob.sync("src/**/*.[ts|js]*"), config.noEnv.pathsToIgnore)),
+	entryPoint(utils.toObject(glob.sync("src/**/*.[ts]*"), config.noEnv.pathsToIgnore)),
 	utils.setOut(),
 
-	typescript(),
+	customConfig({
+		resolve: {
+			extensions: ['.ts', '.tsx']
+		},
+		module: {
+			rules: [{
+				test: /\.(ts|tsx)$/,
+				loader: 'awesome-typescript-loader',
+			}]
+		},
+		plugins: [
+			new atl.CheckerPlugin(),
+		]
+	}),
 
 	setEnv({
 		NODE_ENV: process.env.NODE_ENV
