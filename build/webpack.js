@@ -8,6 +8,9 @@ const {
 	sourceMaps,
 	createConfig,
 
+	// Feature block
+	css,
+
 	// Shorthand setters
 	customConfig,
 	setEnv,
@@ -20,6 +23,8 @@ const {
 module.exports = createConfig([
 	entryPoint(utils.toObject(glob.sync("src/**/*.[ts]*"), config.noEnv.pathsToIgnore)),
 	utils.setOut(),
+
+	css(),
 
 	customConfig({
 		resolve: {

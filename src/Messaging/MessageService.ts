@@ -18,6 +18,8 @@ export class MessageService {
 		}
 	};
 
+	static popup = MessageService.content;
+
 	static background = class {
 		public static emitToActiveTab(
 			payload: any,

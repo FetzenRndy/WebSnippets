@@ -1,9 +1,9 @@
 import { MessageService } from "./Messaging/MessageService";
-import {isTextBox} from "./Abstractions/DOM";
+import { isTextBox } from "./Abstractions/DOM";
 
 // Current implementation, may not be the most performance friendly :/
 document.addEventListener("keyup", () => {
-	if(!isTextBox(document.activeElement)) {
+	if (!isTextBox(document.activeElement)) {
 		return;
 	}
 
@@ -11,7 +11,7 @@ document.addEventListener("keyup", () => {
 	MessageService.content.emitToBackground(
 		{
 			type: "parse",
-			text: activeElement.value,
+			text: activeElement.value
 		},
 		response => {
 			console.log(response);
