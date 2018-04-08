@@ -1,12 +1,18 @@
 {
   "name": "websnippets",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "A web extension for snippets on the web",
-  "main": "index.js",
+  "author": "PatrickHollweck <patrick-hollweck@gmx.de>",
   "scripts": {
     "test": "jest",
     "start": "tsc"
   },
-  "author": "PatrickHollweck <patrick-hollweck@gmx.de>",
-  "license": "MIT"
+  "devDependencies": {
+    "@types/webpack": "^4.1.3",
+    "glob": "^7.1.2",
+    "typescript": "^2.8.1",
+    "webpack": "^4.5.0",
+    "webpack-blocks": "^1.0.0"
+  }
 }

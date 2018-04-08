@@ -16,7 +16,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"allowSyntheticDefaultImports": true,
 		"strictNullChecks": true,
-		"baseUrl": "./resources/client/js",
+		"outDir": "dist",
 		"module": "commonjs",
 		"target": "es6",
 		"jsx": "react",
