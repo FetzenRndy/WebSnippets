@@ -1,8 +1,7 @@
-import {SnippetParser} from "../SnippetParser";
-import {Snippet} from "../../Models/Snippet";
+import { SnippetParser } from "../SnippetParser";
+import { Snippet } from "../../Models/Snippet";
 
-describe('The snippet parser', () => {
-
+describe("The snippet parser", () => {
 	let parser: SnippetParser;
 
 	beforeEach(() => {
@@ -10,7 +9,7 @@ describe('The snippet parser', () => {
 		parser.registerSnippet(new Snippet("$test", "wired"));
 	});
 
-	it('should replace snippet keywords with the snippets content', () => {
+	it("should replace snippet keywords with the snippets content", () => {
 		const originalText = "This is a $test text";
 		const parsedText = parser.replaceKeywords(originalText);
 

@@ -1,4 +1,4 @@
-import {Snippet} from "../Models/Snippet";
+import { Snippet } from "../Models/Snippet";
 
 export class SnippetParser {
 	private snippets: Snippet[];
@@ -15,14 +15,14 @@ export class SnippetParser {
 		let returnText = "";
 
 		// IDEA: Can be made more efficient by tracking the words and then checking the text until the last space.
-		for(const word of words) {
-			for(const snippet of this.snippets) {
-				if(word === snippet.keyword) {
+		for (const word of words) {
+			for (const snippet of this.snippets) {
+				if (word === snippet.keyword) {
 					// Add the keyword content instead of the word to the result
 					returnText += snippet.content + " ";
 				} else {
 					// Make sure we do not add a trailing space.
-					if(words[words.length - 1] === word) {
+					if (words[words.length - 1] === word) {
 						returnText += word;
 						continue;
 					}
