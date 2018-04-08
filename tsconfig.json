@@ -1,9 +1,9 @@
 {
 	"compilerOptions": {
-		"allowJs": true,
+		"allowJs": false,
+		"checkJs": false,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
-		"checkJs": false,
 		"diagnostics": true,
 		"strict": true,
 		"noImplicitReturns": true,
@@ -23,13 +23,12 @@
 		"types": [
 			"node",
 			"jest",
-			"chai",
-			"lodash"
 		]
 	},
 	"exclude": [
 		".vscode",
 		".idea",
+		"dist",
 		"node_modules",
 		"vendor"
 	]
