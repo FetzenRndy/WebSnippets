@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"checkJs": false,
+		"diagnostics": true,
+		"strict": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"removeComments": true,
+		"pretty": true,
+		"strictPropertyInitialization": false,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"strictNullChecks": true,
+		"baseUrl": "./resources/client/js",
+		"module": "commonjs",
+		"target": "es6",
+		"jsx": "react",
+		"types": [
+			"node",
+			"jest",
+			"chai",
+			"lodash"
+		]
+	},
+	"exclude": [
+		".vscode",
+		".idea",
+		"node_modules",
+		"vendor"
+	]
+}

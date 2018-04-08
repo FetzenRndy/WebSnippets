@@ -1,0 +1,12 @@
+{
+  "name": "websnippets",
+  "version": "1.0.0",
+  "description": "A web extension for snippets on the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "tsc"
+  },
+  "author": "PatrickHollweck <patrick-hollweck@gmx.de>",
+  "license": "MIT"
+}
