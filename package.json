@@ -7,13 +7,15 @@
   "scripts": {
     "test": "jest",
     "start": "cross-env NODE_ENV=development webpack --config=build/webpack.js --watch --mode=development",
-    "prod": "cross-env NODE_ENV=production webpack --config=build/webpack.js --mode=production"
+    "prod": "cross-env NODE_ENV=production webpack --config=build/webpack.js --mode=production",
+  	"format": "prettier --write src/**/*.ts"
   },
   "devDependencies": {
     "@types/jest": "^22.2.2",
     "@types/webpack": "^4.1.3",
     "cross-env": "^5.1.4",
     "glob": "^7.1.2",
+    "prettier": "^1.11.1",
     "typescript": "^2.8.1",
     "webpack": "^4.5.0",
     "webpack-blocks": "^1.0.0",
